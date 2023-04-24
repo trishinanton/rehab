@@ -1,0 +1,95 @@
+@import "../../common/styles/sass/mixins.sccs";
+@import "../../common/styles/sass/variables.sccs";
+
+.card{
+  @include flex(column, space-between, center);
+  padding: 50px 20px;
+  background: #fff;
+  margin: 0px 15px;
+  //width: auto;
+}
+.icon{
+  width: 70% !important;
+  height: 70%;
+  &__wrapper{
+    @include flex(row,center,center);
+    width: 85px;
+    height: 85px;
+    color: $primaryColor;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    transition: all .4s;
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      border-radius: 30px;
+      background: $bgColor;
+      z-index: -1;
+      transform: rotate(45deg);
+      transition: all .4s;
+    }
+    &:hover{
+      color: white;
+      transition: all .4s;
+      &:after{
+        background: $primaryColor;
+        transform: rotate(0deg);
+        transition: all .4s;
+      }
+    }
+  }
+}
+.title{
+  @include text ($titleFontFamily,16px,400,1px,1.2,black);
+  margin-bottom: 15px;
+}
+.description{
+  @include text ($bodyFontFamily, 14px, 400,0px, 1.8, $textColor);
+  text-align: center;
+}
+
+@media screen and (max-width: 980px){
+  .card{
+    width: 38%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .icon{
+    &__wrapper{
+      width: 115px;
+      height: 115px;
+    }
+  }
+  .title{
+    font-size: 28px;
+  }
+  .card{
+    width: 100%;
+    margin: 40px 0px;
+    box-sizing: border-box;
+  }
+  .description{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 580px){
+  .icon{
+    &__wrapper{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .title{
+    font-size: 21px;
+  }
+  .description{
+    font-size: 18px;
+  }
+}

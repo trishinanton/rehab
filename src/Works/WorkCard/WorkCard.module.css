@@ -1,0 +1,45 @@
+.card{
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    border: 1px solid black;
+    padding-bottom: 20px;
+}
+.card__icon{
+    width: 100%;
+    height: 150px;
+    background-color: #D6D7DA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__name{
+    margin-left: 10px;
+}
+.card__name>span{
+    background-color: #D6D7DA
+}
+.card__description{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #D6D7DA;
+    padding-bottom: 20px;
+    width: 90%;
+    text-align: left;
+
+}
+
+@media screen and (max-width: 375px){
+    .card{
+        width: 80%;
+        margin-bottom: 20px;
+        border: none;
+    }
+    .card__description{
+        border: none;
+        padding-bottom: 20px;
+    }
+}

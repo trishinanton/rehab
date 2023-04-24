@@ -1,0 +1,25 @@
+.container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.button{
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #929292;
+    border-radius: 2px;
+}
+.button:hover{
+    cursor: pointer;
+}
+.name__block{
+    font-size: 20px;
+    font-weight: 600;
+}
+@media screen and (max-width: 375px){
+    .container{
+        width: 90%;
+    }
+}

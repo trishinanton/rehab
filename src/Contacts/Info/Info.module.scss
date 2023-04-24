@@ -1,0 +1,19 @@
+@import "../../common/styles/sass/mixins.sccs";
+@import "../../common/styles/sass/variables.sccs";
+
+.information{
+    margin-bottom: 30px;
+    .title{
+        @include text ($titleFontFamily,11px,400,2px,1.2,$primaryColor);
+        text-transform: uppercase;
+    }
+    .description{
+        @include text ($bodyFontFamily,15px,400,0px,1.8,$textColor)
+    }
+}
+h6{
+    margin:0;
+}
+p{
+    margin: 0;
+}

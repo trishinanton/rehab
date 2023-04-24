@@ -1,0 +1,6 @@
+$textColor: #8f8f8f;
+$primaryColor: #c49b66;
+$bgColor: #f7f7f7;
+$titleColor: #dadada;
+$titleFontFamily: 'Josefin Sans', sans-serif;
+$bodyFontFamily: 'Rubik', sans-serif;

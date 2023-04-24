@@ -1,0 +1,30 @@
+@import '../common/styles/sass/mixins.sccs';
+.header{
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    top:0px;
+    right: 0px;
+    z-index: 2;
+    &__wrapper{
+        @include flex(row, space-between, center);
+        height: 80px;
+    }
+    .logo{
+        width: 160px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        .logo{
+            width: 97px;
+        }
+        &__wrapper{
+            height: 60px;
+        }
+    }
+}

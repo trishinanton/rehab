@@ -1,0 +1,36 @@
+.variants{
+    background-color: #FFFEEC;
+    padding: 50px 0px;
+}
+.variants__wrapper{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.variants__header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70px;
+}
+.variants__header >span{
+    background-color: #D6D7DA;
+}
+.variants__button{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 375px){
+    .variants__header{
+        border-bottom: none;
+    }
+    .variants__wrapper{
+        border: none;
+    }
+    .card__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

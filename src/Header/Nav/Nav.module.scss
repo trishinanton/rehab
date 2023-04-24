@@ -1,0 +1,45 @@
+@import "../../common/styles/sass/mixins.sccs";
+@import "../../common/styles/sass/variables.sccs";
+.nav{
+    @include flex(row,space-between, center);
+    height: 100%;
+    &_mobile{
+        display: none;
+        div{
+            width: 18px;
+            height: 2px;
+            background-color: white;
+        }
+    }
+}
+a{
+    text-decoration: none;
+
+}
+.menu {
+    margin-left: 3em;
+    @include text($bodyFontFamily, 13px, 600, 0.5px, 1.3, #eee);
+    height: 60%;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    &:hover {
+        color:$primaryColor;
+        cursor: pointer;
+        transition: .5s;
+    }
+}
+.nav_active{
+    color: $primaryColor;
+}
+@media screen and (max-width: 769px){
+    .nav{
+        display: none;
+        &_mobile{
+            display: block;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,51 @@
+@import "../common/styles/sass/mixins.sccs";
+@import "../common/styles/sass/variables.sccs";
+
+.container{
+    /*width: 80%;*/
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+}
+.button {
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    padding: 12px 34px;
+    border-radius: 30px;
+    @include text($bodyFontFamily, 14px, 400, 1px, 1.3, #fff);
+    margin-right: 20px;
+    transition: .5s;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+
+&:hover {
+     background: white;
+     border: 1px solid $primaryColor;
+     color: $primaryColor;
+     cursor: pointer;
+     transition: .5s;
+ }
+}
+.name__block{
+    font-size: 20px;
+    font-weight: 600;
+}
+@media screen and (max-width: 1120px){
+    .container{
+      max-width: 80%;
+    }
+}
+@media (min-width: 981px) and (max-width: 1098px){
+  .button{
+    padding: 12px 14px;
+  }
+}
+@media screen and (max-width: 580px){
+  .button{
+    padding: 12px 23px;
+  }
+}
+@media screen and (max-width: 375px){
+  .button{
+    padding: 12px 15px;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../common/styles/sass/mixins.sccs";
+@import "../common/styles/sass/variables.sccs";
+
+.svg{
+    width:100%;
+    fill:$bgColor;
+    position:absolute;
+    top:-1px;
+}
+.logo{
+
+        &:hover{
+            cursor: pointer;
+        }
+
+    img{
+        width: 200px;
+    }
+    margin-bottom: 30px;
+}
+.footer{
+    background-color: white;
+    padding-top: 140px;
+    padding-bottom: 30px;
+    position: relative;
+    &__wrapper{
+        @include flex(column, space-between, center)
+    }
+    .social{
+        @include flex(row,center,center)
+    }
+    .description{
+        @include text($bodyFontFamily,12px,400,2px,1.8,$textColor)
+    }
+}
+@media screen and (max-width: 420px) {
+    .footer{
+        padding-top: 80px;
+    }
+}
+
+
+

@@ -1,0 +1,40 @@
+.main{
+    background-color: black;
+}
+.main__wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+span{
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+
+
+@media screen and (max-width: 375px){
+    .main{
+        height: 80vh;
+    }
+    .main__wrapper{
+        border: none;
+        width: 100%;
+    }
+    .text{
+        background-color: transparent;
+        width: 100%;
+    }
+
+}

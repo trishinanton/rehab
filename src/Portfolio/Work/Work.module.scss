@@ -1,0 +1,102 @@
+@import "../../common/styles/sass/mixins.sccs";
+@import "../../common/styles/sass/variables.sccs";
+
+.work {
+  @include flex(row, space-between, center);
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  &_active {
+    background-color: white;
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    margin-left: 1%;
+    border-radius: 6px;
+    @include flex(column, center, center);
+    animation: showActive 1s ease-in-out;
+
+    h6 {
+      @include text($titleFontFamily, 18px, 500, 0px, 1.2, black);
+      margin-bottom: 5px;
+      animation: showTitle 1s ease;
+    }
+
+    p {
+      @include text($bodyFontFamily, 15px, 400, 0px, 1.8, $textColor);
+      animation: showDescription 1s ease-in-out;
+      margin-bottom: 30px;
+    }
+  }
+  .button {
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    padding: 12px 34px;
+    border-radius: 30px;
+    @include text($bodyFontFamily, 14px, 400, 1px, 1.3, #fff);
+    transition: .5s;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
+    animation: showBtn 2s ease-in-out;
+    &:hover {
+      background: white;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      cursor: pointer;
+      transition: .5s;
+    }
+  }
+}
+@keyframes showActive {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes showTitle {
+  0%{
+    transform: translateY(-40px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes showDescription {
+  0%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes showBtn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 980px){
+  .work{
+    width: 93% !important;
+  }
+}
+@media screen and (max-width: 768px){
+  .work{
+    height: 380px !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  .work{
+    height: 315px !important;
+  }
+}
+
+
