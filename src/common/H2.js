@@ -6,7 +6,7 @@ export const H2 = (props)=>{
       ${commonText (bodyFontFamily,'70px','800','2px','1.2', titleColor)};
       margin-top: 0px;
       @media screen and (max-width: 580px){
-        font-size: 45px;
+        font-size: 40px;
       }
     `;
     return(
