@@ -1,12 +1,9 @@
 import style from './Main.module.scss'
-import styleContainer from "../common/container.module.scss";
-import {Nav} from "../Header/Nav/Nav";
 import background from '../common/img/photo4.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faWhatsapp, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { faVk } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import ReactTypingEffect from 'react-typing-effect';
 import styled from "styled-components";
 import {Container} from "../common/Container";
