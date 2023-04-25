@@ -12,15 +12,10 @@ import styled from "styled-components";
 import {Container} from "../common/Container";
 
 export const Main = () => {
-    const bg = {
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundPosition: '50% 0%'
-    }
     const Main = styled.section`
       min-height: 110vh;
+      background: url(${background});
       background-attachment: fixed;
-      background-image: url(${background});
       background-size: cover;
       background-position: 50% 50%;
       &:before{
