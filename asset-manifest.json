@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rehab/static/css/main.0fdca237.chunk.css",
-    "main.js": "/rehab/static/js/main.4d18cd9e.chunk.js",
-    "main.js.map": "/rehab/static/js/main.4d18cd9e.chunk.js.map",
+    "main.js": "/rehab/static/js/main.d3096884.chunk.js",
+    "main.js.map": "/rehab/static/js/main.d3096884.chunk.js.map",
     "runtime-main.js": "/rehab/static/js/runtime-main.e48c63fa.js",
     "runtime-main.js.map": "/rehab/static/js/runtime-main.e48c63fa.js.map",
     "static/css/2.679831fc.chunk.css": "/rehab/static/css/2.679831fc.chunk.css",
@@ -15,7 +15,7 @@
     "static/css/main.0fdca237.chunk.css.map": "/rehab/static/css/main.0fdca237.chunk.css.map",
     "static/js/2.0b3070eb.chunk.js.LICENSE.txt": "/rehab/static/js/2.0b3070eb.chunk.js.LICENSE.txt",
     "static/media/photo3.8f6348e1.jpg": "/rehab/static/media/photo3.8f6348e1.jpg",
-    "static/media/photo4.3134e882.jpg": "/rehab/static/media/photo4.3134e882.jpg",
+    "static/media/photo4.3134e882.png": "/rehab/static/media/photo4.3134e882.png",
     "static/media/photo6.05a0c0a2.jpg": "/rehab/static/media/photo6.05a0c0a2.jpg"
   },
   "entrypoints": [
@@ -23,6 +23,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.0b3070eb.chunk.js",
     "static/css/main.0fdca237.chunk.css",
-    "static/js/main.4d18cd9e.chunk.js"
+    "static/js/main.d3096884.chunk.js"
   ]
 }
