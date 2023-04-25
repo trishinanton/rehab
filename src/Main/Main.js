@@ -103,9 +103,9 @@ export const Main = () => {
                        </H1>
                    </Text>
                     <Social>
-                        <Icon href="https://t.me/by_amali"><FontAwesomeIcon icon={faTelegram}/></Icon>
-                        <Icon href="https://wa.me/79279797056"><FontAwesomeIcon icon={faWhatsapp}/></Icon>
-                        <Icon href="https://vk.com/angelina_mal"><FontAwesomeIcon icon={faVk}/></Icon>
+                        <Icon target="_blank" href="https://t.me/by_amali"><FontAwesomeIcon icon={faTelegram}/></Icon>
+                        <Icon target="_blank" href="https://wa.me/79279797056"><FontAwesomeIcon icon={faWhatsapp}/></Icon>
+                        <Icon target="_blank" href="https://vk.com/angelina_mal"><FontAwesomeIcon icon={faVk}/></Icon>
                     </Social>
                 </MainWrapper>
             </Container>

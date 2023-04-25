@@ -1,21 +1,11 @@
 import React from 'react';
-import style from './Portfolio.module.scss'
-import styleContainer from '../common/container.module.scss'
-import {Work} from "./Work/Work";
-
-import first from '../common/img/1.jpg'
-import second from '../common/img/2.jpg'
-import third from '../common/img/3.jpg'
-import four from '../common/img/4.jpg'
-import five from '../common/img/5.jpg'
-import six from '../common/img/6.jpg'
-import seven from '../common/img/7.jpg'
 import styled from "styled-components";
 import {flex} from "../common/variables";
 import {Svg} from "../common/Svg";
 import {Container} from "../common/Container";
 import {H2} from "../common/H2";
 import Fade from 'react-reveal/Fade';
+import photo from "../common/img/photo6.jpg";
 
 export const Portfolio = React.memo(()=>{
     const styles={
@@ -67,39 +57,93 @@ export const Portfolio = React.memo(()=>{
     const Title = styled.div`
       
     `;
-    const Works = styled.div`
-      ${flex('row', 'space-between', 'center')};
-      width: 100%;
-      @media screen and (max-width: 768px){
-        flex-direction: column;
-      }
-    `;
-    const WorksFirst = styled.div`
-    ${flex('column', 'space-between', 'flex-start')};
-      width: 50%;
-      @media screen and (max-width: 768px){
-        width: 100%;
-        align-items: center;
-      }
-    `;
-    const WorksSecond = styled.div`
-      ${flex('column', 'space-between', 'flex-end')};
-      width: 50%;
-      @media screen and (max-width: 768px){
-        width: 100%;
-        align-items: center;
-      }
-    `;
-    const WorksRow = styled.div`
-      ${flex('row', 'space-between', 'center')};
-      width: 93%;
+
+    const AboutWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 980px){
+    flex-direction: column;
+  }
+      @media screen and (max-width: 480px){
+        margin: 0 auto;
+  }
+`;
+    const Description = styled.div`
+  ${flex('column', 'space-between', 'left')};
+  margin-right: 50px;
       @media screen and (max-width: 980px){
-        flex-direction: column;
+        margin-right: 0px;
+        margin-bottom: 50px;
       }
-      @media screen and (max-width: 768px){
-        width: 100%!important;
-      }
+`;
+    const Photo = styled.div`
+  width: 536px;
+  height: 512px;
+  margin-right: 11%;
+  @media screen and (max-width: 980px){
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 91vw;
+    margin-right: 0;
+  }
+`;
+    const Img = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+`;
+    const H3 = styled.h3`
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  line-height: 1.2;
+  color: black;
+  text-transform: uppercase;
+`;
+    const Span = styled.span`
+  background-color:#c49b66 ;
+  font-family: 'Josefin Sans', sans-serif;;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 0px;
+`;
+    const Text = styled.div`
+ 
+`;
+    const H4 = styled.h4`
+@include text ($titleFontFamily, 18px,500,1px,1.2,black);
+  font-family: 'Josefin Sans', sans-serif;;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: black;
+  margin-bottom: 10px;
+`;
+    const TextDescr = styled.div`
+  margin-bottom: 10px;
+font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 1.8;
+  color: #8f8f8f
+`;
+    const WrapperPhoto = styled.div`
+    width: 100%;
     `;
+    const Link = styled.a`
+    text-decoration: none;
+      color: #c49b66;;
+    `
 
     return(
         <PortfolioSect name={'portfolio'}>
@@ -108,63 +152,35 @@ export const Portfolio = React.memo(()=>{
                 <PortfolioWrapper>
                     <Title>
                         <Fade bottom>
-                            <H2 title={'Portfolio'}/>
+                            <H2 title={'Специальные условия'}/>
                         </Fade>
                     </Title>
-                    <Works>
+                        <AboutWrapper>
+                            <Fade left>
+                                <Description>
+                                    <Text>
+                                        <TextDescr>-10% на групповые занятия
+                                        </TextDescr>
+                                        <TextDescr>
+                                            -10% на групповые занятия
+                                        </TextDescr>
+                                        <TextDescr>
+                                            Много полезной и качественной информации связанной с реабилитацией после травм (операций), коррекцией осанки и плоскостопия, Вы можете найти в моих группах <Link href={'https://t.me/your_rehab'} target="_blank">Telegram</Link> и <Link href={'https://vk.com/club216169738'} target="_blank">VK</Link>.
+                                        </TextDescr>
+                                    </Text>
+                                </Description>
+                            </Fade>
+                            <WrapperPhoto>
+                                <Fade right>
+                                    <Photo>
+                                        <Img src={photo} alt="photo"/>
+                                    </Photo>
+                                </Fade>
+                            </WrapperPhoto>
 
-                        <WorksFirst>
-
-                            <Work img={first} alt={'first'} title={'Crearive Design'} description={'Work description here'} style={styles.first}/>
-                            <Work img={second} alt={'second'} title={'Crearive Design'} description={'Work description here'} style={styles.second}/>
-                            <Work img={third} alt={'third'} title={'Crearive Design'} description={'Work description here'} style={styles.third}/>
-
-                        </WorksFirst>
-
-
-                        <WorksSecond>
-
-                            <Work img={four} alt={'four'} title={'Crearive Design'} description={'Work description here'} style={styles.four}/>
-                            <WorksRow>
-                                <Work img={five} alt={'five'} title={'Crearive Design'} description={'Work description here'} style={styles.five}/>
-                                <Work img={six} alt={'six'} title={'Crearive Design'} description={'Work description here'} style={styles.five}/>
-                            </WorksRow>
-                            <Work img={seven} alt={'seven'} title={'Crearive Design'} description={'Work description here'} style={styles.seven}/>
-
-                        </WorksSecond>
-
-                    </Works>
+                        </AboutWrapper>
                 </PortfolioWrapper>
             </Container>
         </PortfolioSect>
-        // <section className={style.portfolio} name={'portfolio'}>
-        //     <svg className={style.svg} viewBox="0 0 1920 81.717">
-        //         <path d="M1920,0c0,0-109.246,46.107-316.333,67.334C1343.5,94,1137.095,77.238,999.167,67.5C854,57.25,637.662,24.697,541.709,18.834C375.334,8.666,147,11,0,37.875V0H1920L1920,0z"/>
-        //     </svg>
-        //     <div className={styleContainer.container}>
-        //         <div className={style.portfolio__wrapper}>
-        //             <div className={style.title}>
-        //                 <h2>Portfolio</h2>
-        //             </div>
-        //             <div className={style.works}>
-        //                 <div className={style.works__first}>
-        //                     <Work img={first} alt={'first'} title={'Crearive Design'} description={'Work description here'} style={styles.first}/>
-        //                     <Work img={second} alt={'second'} title={'Crearive Design'} description={'Work description here'} style={styles.second}/>
-        //                     <Work img={third} alt={'third'} title={'Crearive Design'} description={'Work description here'} style={styles.third}/>
-        //                 </div>
-        //                 <div className={style.works__second}>
-        //                     <Work img={four} alt={'four'} title={'Crearive Design'} description={'Work description here'} style={styles.four}/>
-        //                     <div className={style.works__row}>
-        //                         <Work img={five} alt={'five'} title={'Crearive Design'} description={'Work description here'} style={styles.five}/>
-        //                         <Work img={six} alt={'six'} title={'Crearive Design'} description={'Work description here'} style={styles.five}/>
-        //                     </div>
-        //
-        //                     <Work img={seven} alt={'seven'} title={'Crearive Design'} description={'Work description here'} style={styles.seven}/>
-        //                 </div>
-        //
-        //             </div>
-        //         </div>
-        //     </div>
-        // </section>
     )
 })

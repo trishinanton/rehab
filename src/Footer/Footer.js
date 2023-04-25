@@ -40,6 +40,9 @@ export const Footer = React.memo(() => {
     const Description = styled.div`
       ${commonText(bodyFontFamily,'12px','400','2px','1.8',textColor)}
     `;
+    const Icon = styled.a`
+    
+    `
 
     return(
         <FooterSect>
@@ -52,11 +55,9 @@ export const Footer = React.memo(() => {
                         </Logo>
                     </Bounce>
                     <SocialWrap>
-                        <Social icon={faInstagram}/>
-                        <Social icon={faTelegram}/>
-                        <Social icon={faWhatsapp}/>
-                        <Social icon={faVk}/>
-                        <Social icon={faGithub}/>
+                        <Icon target="_blank" href="https://t.me/by_amali"><Social icon={faTelegram}/></Icon>
+                        <Icon target="_blank" href="https://wa.me/79279797056"><Social icon={faWhatsapp}/></Icon>
+                        <Icon target="_blank" href="https://vk.com/angelina_mal"><Social icon={faVk}/></Icon>
                     </SocialWrap>
                     <Description>
                         {'© 2018 UI-ThemeZ. All Rights Reserved.'}

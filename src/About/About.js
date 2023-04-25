@@ -104,14 +104,15 @@ font-family: 'Rubik', sans-serif;
 `;
 const Buttons = styled.div`
   margin-top: 30px;
-  @media screen and (max-width: 395px){
-    
+  @media screen and (max-width: 981px){
+    align-self: center;
+    margin-top: 48px;
   }
 `;
 const BtnWhite = styled.a`
   padding: 12px 34px;
   border-radius: 30px;
-  ${commonText(bodyFontFamily, '14px', '400', '1px', '1.3', '#fff')};
+  ${commonText(bodyFontFamily, '15px', '400', '1px', '1.3', '#fff')};
   margin-right: 20px;
   transition: .5s;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, .1);
@@ -128,7 +129,7 @@ const BtnWhite = styled.a`
     padding: 12px 12px;
   }
   @media screen and (max-width: 394px){
-    padding: 12px 15px;
+    padding: 12px 24px;
   }
   
 `;
@@ -174,7 +175,7 @@ export const About = React.memo(() => {
                                 </Text>
                                 <Buttons>
                                     {/*<Button name={'Позвонить'}/>*/}
-                                    <BtnWhite href="https://wa.me/79279797056">Написать мне</BtnWhite>
+                                    <BtnWhite href="https://wa.me/79279797056" target="_blank">Написать мне</BtnWhite>
                                 </Buttons>
                             </Description>
                         </Fade>

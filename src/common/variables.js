@@ -3,7 +3,7 @@ export const textColor = '#8f8f8f';
 export const  primaryColor= '#c49b66';
 export const menuColor = '#eee'
 export const bgColor = '#f7f7f7';
-export const titleColor = '#dadada';
+export const titleColor = '#bcb5b5';
 export const titleFontFamily = `'Josefin Sans', sans-serif`;
 export const bodyFontFamily = `'Rubik', sans-serif`;
 export const commonText = (fontFamily,fontSize,fontWeight,letterSpacing,lineHeight,fontColor)=>({

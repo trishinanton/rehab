@@ -22,12 +22,14 @@ export const Card = (props)=>{
       ${flex('column','space-between','center')};
       padding: 50px 20px;
       background: #fff;
-      margin: 0px 15px;
+      margin: 15px 15px;
+      width: 250px;
+      height: 300px;
       @media screen and (max-width: 980px){
-        width: 38%;
         margin-bottom: 30px;
       }
       @media screen and (max-width: 768px){
+        height: auto;
         width: 100%;
         margin: 40px 0px;
         box-sizing: border-box;
@@ -88,7 +90,7 @@ export const Card = (props)=>{
       }
     `;
     const Description = styled.div`
-      ${commonText (bodyFontFamily, '14px', '400','0px', '1.8', textColor)};
+      ${commonText (bodyFontFamily, '16px', '400','0px', '1.8', textColor)};
       text-align: center;
       @media screen and (max-width: 768px){
         font-size: 20px;
@@ -97,6 +99,7 @@ export const Card = (props)=>{
         font-size: 15px;
       }
     `;
+    // const Icon = props.icon
     return(
         <CardSect>
             <IconWrapper>
